@@ -1,19 +1,25 @@
 ﻿open System
 
-//let greeting (name : string) = printf "Hello, %s" name
-//let result1 = greeting("Andy Bhadai")
+// Basic function
 
-// Some and None to check whether or not a number <= 0
-//let printNumber (n : int) = 
-//    match n with
-//    | 0 -> None
-//    | _ -> Some(n)
+let greet (message: string) (name: string) =
+    printf "%s %s" message name
 
-//let result2 : int option = printNumber(1)
-//printfn "Result: %A" result2
+let greeting = greet "Welcome to our application, " "Andy"
 
-//let averageFour(a : int) (b : int) (c : int) (d : int)=
-//    let result = (a + b + c + d) / 4
-//    printf "The average of these is %i" result"
+let greater (a : int) (b : int) = 
+    a > b
 
+let simpleDisplayCharacter (phrase : string) =
+    for p in phrase do
+        Console.WriteLine(p)
     
+
+let greaterOrSmaller = 
+    if greater 4 2 then
+        printf "It is greater"
+    else
+        printf "It is smaller"
+
+let name = simpleDisplayCharacter "Hallo, dit is een zin"
+ 
